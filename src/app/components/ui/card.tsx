@@ -16,7 +16,7 @@ export default function Card(props: Project) {
             <div className='flex flex-col p-6 mt-5 border-slate-500 rounded-xl lg:rounded-r-xl bg-slate-800 lg:my-2 lg:w-2/3'>
                 <div>
                     <div>
-                        <h1 className='text-2xl text-yellow-500 font-bold font-sans'>{title}</h1>
+                        <h2 className='text-2xl text-yellow-500 font-bold font-sans'>{title}</h2>
                     </div>
                     <h2 className='text-sm mt-1 font-light'>{subtitle}</h2>
                     <span className='mt-3 text-sm'  dangerouslySetInnerHTML={{ __html: description }}></span>

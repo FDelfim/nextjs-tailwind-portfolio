@@ -39,7 +39,7 @@ export default function Projects() {
             {projects &&
                 <>
                     <div className='flex-row gap-2 items-center text-gray-50 mb-3'>
-                        <h1 className='text-2xl font-bold'>Projetos</h1>
+                        <h2 className='text-2xl font-bold'>Projetos</h2>
                         <p>Alguns projetos desenvolvidos por mim.</p>
                     </div>
                     <div className='m-2 flex flex-wrap justify-between'>
