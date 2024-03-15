@@ -1,13 +1,23 @@
-import Image from "next/image";
 import Home from "./components/home";
-import Card from "./components/card";
+import Projects from "./components/projects";
+import Footer from "./components/footer";
+import Navbar from "./components/navbar";
 
 export default function Index() {
   return (
-    <div className='m-10 gap-10 flex'>
-      <Card title='QR Leitos' subtitle='Aplicação para monitoramento de leitos hospitalares' app='?' repo=':' description='lorem ipsum' img='https://via.placeholder.com/150'/>
-      <Card title='Rs-sp' subtitle='Escala de resiliência psicológica no espote' description='lorem ipsum' img='https://via.placeholder.com/150'/>
-    </div>
+    <>
+      <Navbar />
+      <div className='px-4 py-2 lg:px-40 md:px-10'>
+        <Home />
+        <div className='bg-amber-500 w-full my-3 rounded-xl'>
+          <div className='flex justify-center items-center p-2 text-center'>
+            <p className='text-white'>🚨 ESTAMOS EM OBRAS 🚨<br/>🚧 PORTFOLIO EM DESENVOLVIMENTO 🚧</p>
+          </div>
+        </div>
+        <Projects />
+        <Footer />
+      </div>
+    </>
   );
 }
 
