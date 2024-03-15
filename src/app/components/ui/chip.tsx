@@ -6,9 +6,12 @@ interface chipProps{
 }
 
 export default function Chip(props:chipProps) {
+
+  const { text, color } = props;
+  
   return (
-    <div className={`bg-${props.color}-600 text-${props.color}-100 opacity-90 font-bold px-2 rounded-xl text-sm`}>
-        {props.text}
+    <div className={`bg-${color}-600 text-${color}-100 opacity-90 font-bold px-2 rounded-xl text-xs`}>
+        {text}
     </div>
   )
 }

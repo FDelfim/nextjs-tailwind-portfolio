@@ -19,7 +19,18 @@ export default function Card(props: Project) {
                         <h1 className='text-2xl text-yellow-500 font-bold font-sans'>{title}</h1>
                     </div>
                     <h2 className='text-sm mt-1 font-light'>{subtitle}</h2>
-                    <p className='mt-3'>{description}</p>
+                    <span className='mt-3 text-sm'  dangerouslySetInnerHTML={{ __html: description }}></span>
+                </div>
+                <div className='py-2 flex flex-wrap justify-center gap-4'>
+                    {
+                        technologies?.map((tech) => {
+                            return(
+                                <div key={tech.name}>
+                                    <Chip text={tech.name} color={tech.color} />
+                                </div>
+                            );
+                        })
+                    }
                 </div>
                 <div className='flex justify-end gap-2 mt-5'>
                     {app && <Link href={app} target='_blank' className='bg-blue-700 text-white p-1 rounded-md hover:bg-blue-600 transition-all duration-300 ease-in-out'><CiGlobe size={30} /></Link>}
