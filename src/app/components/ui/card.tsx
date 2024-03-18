@@ -3,7 +3,6 @@ import { FaGithub, FaInfoCircle } from "react-icons/fa";
 import { CiGlobe } from 'react-icons/ci';
 import Link from 'next/link';
 import { Project } from '@/types/project';
-import Chip from './chip';
 
 export default function Card(props: Project) {
     const { img, title, technologies, subtitle, description, app, repo, info } = props;
