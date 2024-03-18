@@ -10,27 +10,30 @@ export default function Card(props: Project) {
 
     return (
         <div className='flex flex-col lg:flex-row h-full w-full'>
-            <div className='relative w-full h-24 lg:h-full lg:w-1/3 flex justify-center'>
+            <div className='relative w-full h-24 lg:h-full lg:w-1/4 flex justify-center'>
                 <img className='absolute lg:h-full object-cover lg:w-full rounded-lg h-[135px]' loading='lazy' src={img} alt={title} />
             </div>
-            <div className='flex flex-col p-6 mt-5 border-slate-500 rounded-xl lg:rounded-r-xl bg-slate-800 lg:my-2 lg:w-2/3'>
+            <div className='flex flex-col p-6 mt-5 border-slate-500 rounded-xl lg:rounded-r-xl bg-slate-800 lg:my-2 lg:w-3/4'>
                 <div>
                     <div>
                         <h2 className='text-2xl text-yellow-500 font-bold font-sans'>{title}</h2>
                     </div>
                     <h2 className='text-sm mt-1 font-light'>{subtitle}</h2>
-                    <span className='mt-3 text-sm'  dangerouslySetInnerHTML={{ __html: description }}></span>
+                    <span className='mt-3 text-sm' dangerouslySetInnerHTML={{ __html: description }}></span>
                 </div>
-                <div className='py-2 flex flex-wrap justify-center gap-4'>
-                    {
-                        technologies?.map((tech) => {
-                            return(
-                                <div key={tech.name}>
-                                    <Chip text={tech.name} color={tech.color} />
-                                </div>
-                            );
-                        })
-                    }
+                <div className='py-2 flex flex-wrap'>
+                    <h3 className='text-sm font-bold'>Tecnologias: </h3>
+                    <span className='flex ps-1 gap-1'>
+                        {
+                            technologies?.map((tech, index) => {
+                                return (
+                                    <div key={tech.name}>
+                                        <h4 className='text-sm'>{tech.name}{index !== technologies.length - 1 ? ', ' : ''} </h4>
+                                    </div>
+                                );
+                            })
+                        }
+                    </span>
                 </div>
                 <div className='flex justify-end gap-2 mt-5'>
                     {app && <Link href={app} target='_blank' className='bg-blue-700 text-white p-1 rounded-md hover:bg-blue-600 transition-all duration-300 ease-in-out'><CiGlobe size={30} /></Link>}

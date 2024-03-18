@@ -10,7 +10,7 @@ export default function Footer() {
     };
 
     return (
-        <footer className='w-full flex-col my-10'>
+        <footer className='w-full flex-col my-10' id='contact'>
             <div className='flex justify-center gap-5'>
                 <button data-tooltip-target="tooltip-default" className='hover:text-blue-400 ease-in-out transition-all duration-300' onClick={handleEmailClick}><MdOutlineMail size={30}/></button>
                 <div id="tooltip-default" role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
