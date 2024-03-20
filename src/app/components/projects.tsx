@@ -31,6 +31,18 @@ export default function Projects() {
                     { name: 'Chakra UI', color: 'emerald' },
                     { name: 'NextAuth', color: 'indigo' }
                 ]
+            },
+            {
+                title: 'Portfolio',
+                subtitle: 'Meu portfólio',
+                description: 'Este projeto é o meu portfólio pessoal, desenvolvido com NextJS e TailwindCSS.',
+                repo: 'https://github.com/FDelfim/nextjs-tailwind-portfolio', 
+                img: '/assets/avatar.png',
+                technologies: [
+                    { name: 'NextJS', color: 'zinc' },
+                    { name: 'TailwindCSS', color: 'cyan' },
+                    { name: 'TypeScript', color: 'blue' }
+                ]
             }
         ] as Project[]
 
@@ -42,9 +54,9 @@ export default function Projects() {
                         <h2 className='text-2xl font-bold'>Projetos</h2>
                         <p>Alguns projetos desenvolvidos por mim.</p>
                     </div>
-                    <div className='flex flex-wrap justify-between'>
+                    <div className='flex flex-wrap justify-center gap-10'>
                         {projects.map((project, index) => (
-                            <div key={index} className='py-2 lg:px-2 w-full md:w-full'>
+                            <div key={index} className='py-2 w-full md:w-1/3'>
                                 <Card {...project} />
                             </div>
                         ))}

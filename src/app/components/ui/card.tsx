@@ -8,11 +8,11 @@ export default function Card(props: Project) {
     const { img, title, technologies, subtitle, description, app, repo, info } = props;
 
     return (
-        <div className='flex flex-col lg:flex-row h-full w-full'>
-            <div className='relative w-full h-24 lg:h-full lg:w-1/4 flex justify-center'>
-                <img className='absolute lg:h-full object-cover lg:w-full rounded-lg h-[135px]' loading='lazy' src={img} alt={title} />
+        <div className='flex flex-col h-full w-full'>
+            <div className='relative w-full flex justify-center'>
+                <img className='relative object-cover aspect-w-1 aspect-h-1 rounded-lg w-1/3 mb-[-20px]' loading='lazy' src={img} alt={title} />
             </div>
-            <div className='flex flex-col p-6 mt-5 border-slate-500 rounded-xl lg:rounded-r-xl bg-slate-800 lg:my-2 lg:w-3/4'>
+            <div className='flex flex-col p-6 border-slate-500 rounded-xl bg-slate-800 h-full'>
                 <div>
                     <div>
                         <h2 className='text-2xl text-yellow-500 font-bold font-sans'>{title}</h2>
