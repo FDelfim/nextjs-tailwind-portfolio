@@ -2,17 +2,17 @@ import React from 'react'
 import { FaGithub, FaInfoCircle } from "react-icons/fa";
 import { CiGlobe } from 'react-icons/ci';
 import Link from 'next/link';
-import { Project } from '@/types/project';
+import { Project, author } from '@/types/project';
 
 export default function Card(props: Project) {
-    const { img, title, technologies, subtitle, description, app, repo, info } = props;
+    const { img, title, technologies, subtitle, description, app, repo, info, author } = props;
 
     return (
         <div className='flex flex-col h-full w-full'>
             <div className='relative w-full flex justify-center'>
                 <img className='relative object-cover aspect-w-1 aspect-h-1 rounded-lg w-1/3 mb-[-20px]' loading='lazy' src={img} alt={title} />
             </div>
-            <div className='flex flex-col p-6 border-slate-500 rounded-xl bg-slate-800 h-full'>
+            <div className='flex flex-col p-6 border-slate-500 rounded-xl bg-slate-800 h-full justify-between'>
                 <div>
                     <div>
                         <h2 className='text-2xl text-yellow-500 font-bold font-sans'>{title}</h2>
@@ -20,19 +20,31 @@ export default function Card(props: Project) {
                     <h2 className='text-sm mt-1 font-light'>{subtitle}</h2>
                     <span className='mt-3 text-sm' dangerouslySetInnerHTML={{ __html: description }}></span>
                 </div>
-                <div className='py-2 flex flex-wrap'>
-                    <h3 className='text-sm font-bold'>Tecnologias: </h3>
-                    <span className='flex ps-1 gap-1'>
-                        {
-                            technologies?.map((tech, index) => {
-                                return (
-                                    <div key={tech.name}>
-                                        <h4 className='text-sm'>{tech.name}{index !== technologies.length - 1 ? ', ' : ''} </h4>
-                                    </div>
-                                );
-                            })
-                        }
+                <div className='my-2 flex flex-wrap'>
+                    <span className='flex ps-1'>
+                        <span className='text-sm'>
+                            <span className='text-sm font-bold'>Tecnologias: </span>
+                            {
+                                technologies?.map((tech, index) => {
+                                    return (
+                                        <>{tech.name}{index !== technologies.length - 1 ? ', ' : ''}</>
+                                    );
+                                })
+                            }
+                        </span>
                     </span>
+                </div>
+                <div>
+                    <div className='mt-2'>
+                        <b>Autores</b>
+                        {
+                            author.map((auth, index) => (
+                                <div key={index}>
+                                    <a className='text-blue-500 hover:underline' href={auth.url} target={auth.url !== '#home' ? "_blank" : ''}>{auth.name}</a>
+                                </div>
+                            ))
+                        }
+                    </div>
                 </div>
                 <div className='flex justify-end gap-2 mt-5'>
                     {app && <Link href={app} target='_blank' className='bg-blue-700 text-white p-1 rounded-md hover:bg-blue-600 transition-all duration-300 ease-in-out'><CiGlobe size={30} /></Link>}

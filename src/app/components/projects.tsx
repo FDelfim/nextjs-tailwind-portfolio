@@ -8,14 +8,21 @@ export default function Projects() {
             {
                 title: 'QR Leitos',
                 subtitle: 'Aplicação para monitoramento de leitos hospitalares',
-                description: '<p>Projeto desenvolvido na UFOP e premiado na II Semana do Conhecimento de João Monlevade/MG.</p><br><p>O projeto conta com uma aplicação Mobile desenvolvida com React Native e uma aplicação WEB desenvolvida com React.</p>',
+                description: '<p className="text-justify">Projeto desenvolvido na UFOP e premiado na II Semana do Conhecimento de João Monlevade/MG.</p><br>O projeto conta com uma aplicação Mobile desenvolvida com React Native e uma aplicação WEB desenvolvida com React.'+
+                'Atualmente o projeto se encontra na fase de implantação, os testes em setores pilotos estão sendo realizados.',
                 img: '/assets/qr_leitos.jpeg',
                 repo: '',
                 app: '',
                 technologies: [
                     { name: 'Firebase', color: 'amber' },
                     { name: 'NextJS', color: 'zinc' },
-                    { name: 'Chakra UI', color: 'emerald' }
+                    { name: 'Chakra UI', color: 'emerald' },
+                    { name: 'ReactNative', color: 'teal'},
+                    { name: 'NextAuth', color: 'indigo' }
+                ],
+                author: [
+                    { name: 'Felipe Delfim', url: '#home'},
+                    { name: 'Henrique Malvar', url: 'https://portfolio-henriquemalvar.vercel.app/'}
                 ]
             },
             {
@@ -30,7 +37,8 @@ export default function Projects() {
                     { name: 'NextJS', color: 'zinc'},
                     { name: 'Chakra UI', color: 'emerald' },
                     { name: 'NextAuth', color: 'indigo' }
-                ]
+                ],
+                author: [{ name: 'Felipe Delfim', url: '#home' }]
             },
             {
                 title: 'Portfolio',
@@ -42,7 +50,8 @@ export default function Projects() {
                     { name: 'NextJS', color: 'zinc' },
                     { name: 'TailwindCSS', color: 'cyan' },
                     { name: 'TypeScript', color: 'blue' }
-                ]
+                ],
+                author: [{ name: 'Felipe Delfim', url: '#home' }]
             }
         ] as Project[]
 
@@ -54,9 +63,9 @@ export default function Projects() {
                         <h2 className='text-2xl font-bold'>Projetos</h2>
                         <p>Alguns projetos desenvolvidos por mim.</p>
                     </div>
-                    <div className='flex flex-wrap justify-center gap-10'>
+                    <div className='flex flex-wrap justify-center'>
                         {projects.map((project, index) => (
-                            <div key={index} className='py-2 w-full md:w-1/3'>
+                            <div key={index} className='py-2 w-full md:w-1/2 px-2'>
                                 <Card {...project} />
                             </div>
                         ))}
