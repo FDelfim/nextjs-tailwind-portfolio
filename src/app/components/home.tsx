@@ -15,8 +15,8 @@ export default function Home() {
                 <h2 className='mt-2 text-xl lg:text-2xl'>Desenvolvedor fullstack</h2>
               </div>
             </div>
-            <p className='mt-4 md:text-justify lg:text-justify text-center'>Estudante de Engenharia da Computação na Universidade Federal de Ouro Preto (UFOP), sou apaixonado por tecnologia e criar novas coisas.
-              Tabalho atualmente como desevolvedor fullstack, com Laravel, MySQL, Livewire, Bootstrap.</p>
+            <p className='mt-4 md:text-justify lg:text-justify text-center'>Engenheiro da Computação formado pela Universidade Federal de Ouro Preto (UFOP), sou apaixonado por tecnologia e criar novas coisas.
+              Tabalho atualmente como desevolvedor fullstack, com Vue.js, Node.js.</p>
           </div>
         </div>
         <div className='lg:w-1/3 w-full hidden lg:flex justify-center content-center items-center '>
