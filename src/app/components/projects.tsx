@@ -6,6 +6,22 @@ export default function Projects() {
     const projects =
         [
             {
+                title: 'FlexiFile',
+                subtitle: 'Conversor de arquivos',
+                description: 'Sistema desenvolvido para converter arquivos para diferentes formatos. Desenvolvido com NextJS, Flask-API, Redis Upstash. API hospedada na Oracle Cloud e Frontend na Vercel.',
+                img: '/assets/flexifile.png',
+                technologies: [
+                    { name: 'NextJS', color: 'zinc' },
+                    { name: 'TailwindCSS', color: 'cyan' },
+                    { name: 'Flask', color: 'green' },
+                    { name: 'Redis Upstash', color: 'red' },
+                    { name: 'PM2', color: 'emerald' },
+                    { name: 'Oracle Cloud', color: 'emerald' }
+                ],
+                author: [{ name: 'Felipe Delfim', url: '#home' }],
+                app: 'https://flexifile.xyz/',
+            },
+            {
                 title: 'QR Leitos',
                 subtitle: 'Aplicação para monitoramento de leitos hospitalares',
                 description: '<p className="text-justify">Projeto desenvolvido na UFOP e premiado na II Semana do Conhecimento de João Monlevade/MG.</p><br>O projeto conta com uma aplicação Mobile desenvolvida com React Native e uma aplicação WEB desenvolvida com React.'+

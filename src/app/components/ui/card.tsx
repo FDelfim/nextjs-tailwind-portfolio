@@ -10,14 +10,14 @@ export default function Card(props: Project) {
     return (
         <div className='flex flex-col h-full w-full'>
             <div className='relative w-full flex justify-center'>
-                <img className='relative object-cover aspect-w-1 aspect-h-1 rounded-lg w-1/3 mb-[-20px]' loading='lazy' src={img} alt={title} />
+                <img className='relative object-cover aspect-w-1 aspect-h-1 rounded-lg w-1/3 mb-[-20px] bg-white' loading='lazy' src={img} alt={title} />
             </div>
             <div className='flex flex-col p-6 border-slate-500 rounded-xl bg-slate-800 h-full justify-between'>
                 <div>
-                    <div>
+                    <div className='mb-2'>
                         <h2 className='text-2xl text-yellow-500 font-bold font-sans'>{title}</h2>
+                        <h2 className='text-xs mt-1 font-light'>{subtitle}</h2>
                     </div>
-                    <h2 className='text-sm mt-1 font-light'>{subtitle}</h2>
                     <span className='mt-3 text-sm' dangerouslySetInnerHTML={{ __html: description }}></span>
                 </div>
                 <div className='my-2 flex flex-wrap'>
