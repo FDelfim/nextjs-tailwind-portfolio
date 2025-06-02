@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Felipe Delfim",
+    "subtitle": "Fullstack Developer",
+    "description": "Computer Engineer graduated from Federal University of Ouro Preto (UFOP), I am passionate about technology and creating new things. I currently work as a fullstack developer, with Vue.js and Node.js."
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Some projects developed by me.",
+    "items": [
+      {
+        "title": "FlexiFile",
+        "subtitle": "File Converter",
+        "description": "System developed to convert files to different formats. Developed with NextJS, Flask-API, Redis Upstash. API hosted on Oracle Cloud and Frontend on Vercel.",
+        "img": "/assets/flexifile.png",
+        "technologies": [
+          { "name": "NextJS", "color": "zinc" },
+          { "name": "TailwindCSS", "color": "cyan" },
+          { "name": "Flask", "color": "green" },
+          { "name": "Redis Upstash", "color": "red" },
+          { "name": "PM2", "color": "emerald" },
+          { "name": "Oracle Cloud", "color": "emerald" }
+        ],
+        "author": [ { "name": "Felipe Delfim", "url": "#home" } ],
+        "app": "https://flexifile.xyz/"
+      },
+      {
+        "title": "QR Leitos",
+        "subtitle": "Hospital bed monitoring application",
+        "description": "Project developed at UFOP and awarded at the II Knowledge Week of João Monlevade/MG. The project includes a Mobile application developed with React Native and a WEB application developed with React. Currently, the project is in the implementation phase, with pilot sector tests being conducted.",
+        "img": "/assets/qr_leitos.jpeg",
+        "repo": "",
+        "app": "",
+        "technologies": [
+          { "name": "Firebase", "color": "amber" },
+          { "name": "NextJS", "color": "zinc" },
+          { "name": "Chakra UI", "color": "emerald" },
+          { "name": "ReactNative", "color": "teal" },
+          { "name": "NextAuth", "color": "indigo" }
+        ],
+        "author": [
+          { "name": "Felipe Delfim", "url": "#home" },
+          { "name": "Henrique Malvar", "url": "https://portfolio-henriquemalvar.vercel.app/" }
+        ]
+      },
+      {
+        "title": "Rs-sp",
+        "subtitle": "Psychological resilience scale in sports",
+        "description": "Project developed as part of my Final Course Work. It is a system for data collection and classification of users in terms of psychological resilience in sports.",
+        "repo": "https://github.com/FDelfim/rs-sp",
+        "app": "https://rs-sp.vercel.app/",
+        "img": "/assets/rs-sp.jpg",
+        "technologies": [
+          { "name": "Firebase", "color": "amber" },
+          { "name": "NextJS", "color": "zinc" },
+          { "name": "Chakra UI", "color": "emerald" },
+          { "name": "NextAuth", "color": "indigo" }
+        ],
+        "author": [ { "name": "Felipe Delfim", "url": "#home" } ]
+      },
+      {
+        "title": "Portfolio",
+        "subtitle": "My portfolio",
+        "description": "This project is my personal portfolio, developed with NextJS and TailwindCSS.",
+        "repo": "https://github.com/FDelfim/nextjs-tailwind-portfolio",
+        "img": "/assets/avatar.png",
+        "technologies": [
+          { "name": "NextJS", "color": "zinc" },
+          { "name": "TailwindCSS", "color": "cyan" },
+          { "name": "TypeScript", "color": "blue" }
+        ],
+        "author": [ { "name": "Felipe Delfim", "url": "#home" } ]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "My professional journey and key achievements over the years",
+    "items": [
+      {
+        "company": "Econodata",
+        "role": "Fullstack Developer",
+        "startDate": "May/2024",
+        "endDate": "Current",
+        "location": "Remote",
+        "description": "Development and maintenance of web systems for economic and financial data analysis.",
+        "technologies": ["Vue.js", "Node.js", "PostgreSQL", "Tailwind", "Google Cloud", "Azion", "Cypress", "GoCD", "GA4"],
+        "achievements": [
+          "End-to-end project creation for lead collection and real-time processing",
+          "Integration with tools such as GA4 and Google Analytics for data analysis",
+          "Implementation of new features following development best practices",
+          "Maintenance and performance improvements to ensure system stability",
+          "Participation in project discoveries to optimize the development process",
+          "Creation of automated tests to ensure code quality"
+        ]
+      },
+      {
+        "company": "Sicoob Credimepi",
+        "role": "Fullstack Developer",
+        "startDate": "June/2023",
+        "endDate": "May/2024",
+        "location": "João Monlevade, MG",
+        "description": "Development and maintenance of web system for Sicoob Credimepi.",
+        "technologies": ["Laravel", "MySQL", "Livewire", "Bootstrap", "jQuery"],
+        "achievements": [
+          "Development of new features for the web system",
+          "Maintenance and optimization of existing systems",
+          "Creation of new modules to assist in the credit analysis process"
+        ]
+      },
+      {
+        "company": "Sicoob Credimepi",
+        "role": "Fullstack Development Intern",
+        "startDate": "August/2022",
+        "endDate": "June/2023",
+        "location": "João Monlevade, MG",
+        "description": "Assistance in the development and maintenance of web system for Sicoob Credimepi.",
+        "technologies": ["Laravel", "MySQL", "Livewire", "Bootstrap", "jQuery"],
+        "achievements": [
+          "Learning and application of development practices",
+          "Bug fixes and performance improvements",
+          "Participation in continuous improvement projects"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "copy": "© {{year}} • Felipe Delfim",
+    "copyTooltip": "Copy"
+  }
+} 

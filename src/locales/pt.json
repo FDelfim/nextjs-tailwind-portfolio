@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "Início",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "contact": "Contato"
+  },
+  "home": {
+    "title": "Felipe Delfim",
+    "subtitle": "Desenvolvedor fullstack",
+    "description": "Engenheiro da Computação formado pela Universidade Federal de Ouro Preto (UFOP), sou apaixonado por tecnologia e criar novas coisas. Trabalho atualmente como desenvolvedor fullstack, com Vue.js e Node.js."
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Alguns projetos desenvolvidos por mim.",
+    "items": [
+      {
+        "title": "FlexiFile",
+        "subtitle": "Conversor de arquivos",
+        "description": "Sistema desenvolvido para converter arquivos para diferentes formatos. Desenvolvido com NextJS, Flask-API, Redis Upstash. API hospedada na Oracle Cloud e Frontend na Vercel.",
+        "img": "/assets/flexifile.png",
+        "technologies": [
+          { "name": "NextJS", "color": "zinc" },
+          { "name": "TailwindCSS", "color": "cyan" },
+          { "name": "Flask", "color": "green" },
+          { "name": "Redis Upstash", "color": "red" },
+          { "name": "PM2", "color": "emerald" },
+          { "name": "Oracle Cloud", "color": "emerald" }
+        ],
+        "author": [ { "name": "Felipe Delfim", "url": "#home" } ],
+        "app": "https://flexifile.xyz/"
+      },
+      {
+        "title": "QR Leitos",
+        "subtitle": "Aplicação para monitoramento de leitos hospitalares",
+        "description": "Projeto desenvolvido na UFOP e premiado na II Semana do Conhecimento de João Monlevade/MG. O projeto conta com uma aplicação Mobile desenvolvida com React Native e uma aplicação WEB desenvolvida com React. Atualmente o projeto se encontra na fase de implantação, os testes em setores pilotos estão sendo realizados.",
+        "img": "/assets/qr_leitos.jpeg",
+        "repo": "",
+        "app": "",
+        "technologies": [
+          { "name": "Firebase", "color": "amber" },
+          { "name": "NextJS", "color": "zinc" },
+          { "name": "Chakra UI", "color": "emerald" },
+          { "name": "ReactNative", "color": "teal" },
+          { "name": "NextAuth", "color": "indigo" }
+        ],
+        "author": [
+          { "name": "Felipe Delfim", "url": "#home" },
+          { "name": "Henrique Malvar", "url": "https://portfolio-henriquemalvar.vercel.app/" }
+        ]
+      },
+      {
+        "title": "Rs-sp",
+        "subtitle": "Escala de resiliência psicológica no esporte",
+        "description": "Projeto desenvolvido como parte do meu Trabalho de Conclusão de Curso. Trata-se de um sistema para coleta de dados e classificação de usuários no aspecto de resiliência psicológica no esporte.",
+        "repo": "https://github.com/FDelfim/rs-sp",
+        "app": "https://rs-sp.vercel.app/",
+        "img": "/assets/rs-sp.jpg",
+        "technologies": [
+          { "name": "Firebase", "color": "amber" },
+          { "name": "NextJS", "color": "zinc" },
+          { "name": "Chakra UI", "color": "emerald" },
+          { "name": "NextAuth", "color": "indigo" }
+        ],
+        "author": [ { "name": "Felipe Delfim", "url": "#home" } ]
+      },
+      {
+        "title": "Portfolio",
+        "subtitle": "Meu portfólio",
+        "description": "Este projeto é o meu portfólio pessoal, desenvolvido com NextJS e TailwindCSS.",
+        "repo": "https://github.com/FDelfim/nextjs-tailwind-portfolio",
+        "img": "/assets/avatar.png",
+        "technologies": [
+          { "name": "NextJS", "color": "zinc" },
+          { "name": "TailwindCSS", "color": "cyan" },
+          { "name": "TypeScript", "color": "blue" }
+        ],
+        "author": [ { "name": "Felipe Delfim", "url": "#home" } ]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "subtitle": "Minha jornada profissional e principais conquistas ao longo dos anos",
+    "items": [
+      {
+        "company": "Econodata",
+        "role": "Desenvolvedor fullstack",
+        "startDate": "Maio/2024",
+        "endDate": "Atual",
+        "location": "Remoto",
+        "description": "Desenvolvimento e manutenção de sistemas web para análise de dados econômicos e financeiros.",
+        "technologies": ["Vue.js", "Node.js", "PostgreSQL", "Tailwind", "Google Cloud", "Azion", "Cypress", "GoCD", "GA4"],
+        "achievements": [
+          "Criação de ponta a ponta de projeto para coleta de leads e processamento em tempo real",
+          "Integração com ferramentas como GA4 e Google Analytics para análise de dados",
+          "Implementação de novas funcionalidades seguindo as boas práticas de desenvolvimento",
+          "Manutenção e melhorias de performance para garantir a estabilidade do sistema",
+          "Participação em discoverys de projetos para otimizar o processo de desenvolvimento",
+          "Criação de testes automatizados para garantir a qualidade do código"
+        ]
+      },
+      {
+        "company": "Sicoob Credimepi",
+        "role": "Desenvolvedor fullstack",
+        "startDate": "Junho/2023",
+        "endDate": "Maio/2024",
+        "location": "João Monlevade, MG",
+        "description": "Desenvolvimento e manutenção de sistema web para o Sicoob Credimepi.",
+        "technologies": ["Laravel", "MySQL", "Livewire", "Bootstrap", "jQuery"],
+        "achievements": [
+          "Desenvolvimento de novas funcionalidades para o sistema web",
+          "Manutenção e otimização de sistemas existentes",
+          "Criação de novos módulos para auxiliar no processo de análise de crédito"
+        ]
+      },
+      {
+        "company": "Sicoob Credimepi",
+        "role": "Estagiário em desenvolvimento fullstack",
+        "startDate": "Agosto/2022",
+        "endDate": "Junho/2023",
+        "location": "João Monlevade, MG",
+        "description": "Auxílio no desenvolvimento e manutenção de sistema web para o Sicoob Credimepi.",
+        "technologies": ["Laravel", "MySQL", "Livewire", "Bootstrap", "jQuery"],
+        "achievements": [
+          "Aprendizado e aplicação de práticas de desenvolvimento",
+          "Correção de bugs e melhorias de performance",
+          "Participação em projetos de melhoria contínua"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "copy": "© {{year}} • Felipe Delfim",
+    "copyTooltip": "Copiar"
+  }
+} 

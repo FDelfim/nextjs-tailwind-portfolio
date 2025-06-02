@@ -1,23 +1,51 @@
+'use client'
+
 import React from 'react'
 import Experience from './ui/Experience'
+import { useTranslation } from 'react-i18next'
+import '../../i18n'
+import { cn } from '@/app/utils/theme'
 
 export default function Experiences() {
+    const { t } = useTranslation();
+    const experiences = t('experience.items', { returnObjects: true }) as unknown as any[];
+
     return (
-        <div className='py-4 mt-10' id='experience'>
-            <div className='flex-row gap-2 items-center text-gray-50 mb-3'>
-                <h2 className='text-2xl font-bold'>Experiência profissional</h2>
-            </div>
-            <div className='h-full'>
-                <Experience companyLogo='/assets/econodata.jpg' company='Econodata' role='Desenvolvedor fullstack' technologies={['Vue.js', 'Node.js', 'PostgreSQL', 'Tailwind', 'Google Cloud', 'Azion']} startDate='Maio/2024' endDate='Atual' />
-                <div className='px-[36px] py-2'>
-                    <div className='hidden md:block h-[20px] w-1 bg-slate-600 rounded-sm'></div>
+        <section className="py-16" id="experience">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-12">
+                    <h2 className={cn(
+                        'text-3xl md:text-4xl font-bold mb-4',
+                        'bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent'
+                    )}>
+                        {t('experience.title')}
+                    </h2>
+                    <p className={cn('text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto')}>
+                        {t('experience.subtitle')}
+                    </p>
                 </div>
-                <Experience companyLogo='/assets/sicoob.png' company='Sicoob Credimepi' role='Desenvolvedor fullstack' technologies={['Laravel', 'MySQL', 'Livewire', 'Bootstrap', 'jQuery']} startDate='Junho/2023' endDate='Maio/2024' />
-                <div className='px-[36px] py-2'>
-                    <div className='hidden md:block h-[20px] w-1 bg-slate-600 rounded-sm'></div>
+
+                <div className="relative">
+                    <div className=" hidden md:block absolute left-0 top-0 bottom-0 md:w-0.5 bg-gray-200 dark:bg-gray-700"></div>
+
+                    <div className="space-y-8">
+                        {Array.isArray(experiences) && experiences.map((exp, index) => (
+                            <Experience 
+                                key={index}
+                                companyLogo={exp.company === 'Econodata' ? '/assets/econodata.jpg' : '/assets/sicoob.png'} 
+                                company={exp.company} 
+                                role={exp.role} 
+                                technologies={exp.technologies} 
+                                startDate={exp.startDate} 
+                                endDate={exp.endDate}
+                                location={exp.location}
+                                description={exp.description}
+                                achievements={exp.achievements}
+                            />
+                        ))}
+                    </div>
                 </div>
-                <Experience companyLogo='/assets/sicoob.png' company='Sicoob Credimepi' role='Estagiário em desenvolvimento fullstack' technologies={['Laravel', 'MySQL', 'Livewire', 'Bootstrap', 'jQuery']} startDate='Agosto/2022' endDate='Junho/2023' />
             </div>
-        </div>
+        </section>
     )
 }

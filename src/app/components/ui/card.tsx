@@ -2,55 +2,135 @@ import React from 'react'
 import { FaGithub, FaInfoCircle } from "react-icons/fa";
 import { CiGlobe } from 'react-icons/ci';
 import Link from 'next/link';
-import { Project, author } from '@/types/project';
+import { Project } from '@/types/project';
+import { cn, themeClasses } from '@/app/utils/theme';
 
 export default function Card(props: Project) {
     const { img, title, technologies, subtitle, description, app, repo, info, author } = props;
 
     return (
         <div className='flex flex-col h-full w-full'>
-            <div className='relative w-full flex justify-center'>
-                <img className='relative object-cover aspect-w-1 aspect-h-1 rounded-lg w-1/3 mb-[-20px] bg-white' loading='lazy' src={img} alt={title} />
+            <div className='relative w-full'>
+                <div className={cn(
+                    'relative w-full',
+                    'aspect-square',
+                    'bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900',
+                    'sm:h-64 md:h-72 lg:h-80',
+                    'flex items-center justify-center',
+                    'overflow-hidden rounded-t-xl'
+                )}>
+                    <img 
+                        className={cn(
+                            'w-full h-full',
+                            'object-contain p-4',
+                            'transition-transform duration-300 hover:scale-105',
+                            'max-w-[90%] max-h-[90%]'
+                        )}
+                        loading='lazy' 
+                        src={img} 
+                        alt={title} 
+                    />
+                </div>
             </div>
-            <div className='flex flex-col p-6 border-slate-500 rounded-xl bg-slate-800 h-full justify-between'>
-                <div>
-                    <div className='mb-2'>
-                        <h2 className='text-2xl text-yellow-500 font-bold font-sans'>{title}</h2>
-                        <h2 className='text-xs mt-1 font-light'>{subtitle}</h2>
+
+            <div className={cn(
+                'flex flex-col p-6 rounded-b-xl h-full justify-between',
+                themeClasses.card.primary,
+                themeClasses.border.primary
+            )}>
+                <div className='space-y-4'>
+                    <div>
+                        <h2 className='text-2xl text-blue-500 dark:text-blue-400 font-bold font-sans'>{title}</h2>
+                        <h2 className={cn('text-sm mt-1 font-light', themeClasses.text.secondary)}>{subtitle}</h2>
                     </div>
-                    <span className='mt-3 text-sm' dangerouslySetInnerHTML={{ __html: description }}></span>
-                </div>
-                <div className='my-2 flex flex-wrap'>
-                    <span className='flex ps-1'>
-                        <span className='text-sm'>
-                            <span className='text-sm font-bold'>Tecnologias: </span>
-                            {
-                                technologies?.map((tech, index) => {
-                                    return (
-                                        <>{tech.name}{index !== technologies.length - 1 ? ', ' : ''}</>
-                                    );
-                                })
-                            }
+
+                    <div className='flex gap-3'>
+                        {app && (
+                            <Link 
+                                href={app} 
+                                target='_blank' 
+                                className={cn(
+                                    'flex items-center gap-2 px-4 py-2 rounded-lg transition-colors duration-300',
+                                    'bg-blue-500 dark:bg-blue-400 text-white hover:bg-blue-600 dark:hover:bg-blue-500',
+                                    'font-medium'
+                                )}
+                            >
+                                <CiGlobe size={20} />
+                                <span>Acessar Aplicação</span>
+                            </Link>
+                        )}
+                        {repo && (
+                            <Link 
+                                href={repo} 
+                                target='_blank' 
+                                className={cn(
+                                    'flex items-center gap-2 px-4 py-2 rounded-lg transition-colors duration-300',
+                                    'bg-gray-600 dark:bg-gray-700 text-white hover:bg-gray-700 dark:hover:bg-gray-600',
+                                    'font-medium'
+                                )}
+                            >
+                                <FaGithub size={20} />
+                                <span>Ver Código</span>
+                            </Link>
+                        )}
+                    </div>
+
+                    <div className={cn('text-sm', themeClasses.text.primary)}>
+                        <span dangerouslySetInnerHTML={{ __html: description }}></span>
+                    </div>
+
+                    <div className='flex flex-wrap gap-2'>
+                        <span className={cn('text-sm font-medium', themeClasses.text.primary)}>
+                            Tecnologias:
                         </span>
-                    </span>
-                </div>
-                <div>
-                    <div className='mt-2'>
-                        <b>Autores</b>
-                        {
-                            author.map((auth, index) => (
+                        <div className='flex flex-wrap gap-1'>
+                            {technologies?.map((tech, index) => (
+                                <span 
+                                    key={index}
+                                    className={cn(
+                                        'px-2 py-1 rounded-md text-xs font-medium',
+                                        'bg-gray-100 dark:bg-gray-700',
+                                        'text-gray-700 dark:text-gray-200'
+                                    )}
+                                >
+                                    {tech.name}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className='space-y-1'>
+                        <h3 className={cn('font-medium', themeClasses.text.primary)}>Autores</h3>
+                        <div className='space-y-1'>
+                            {author.map((auth, index) => (
                                 <div key={index}>
-                                    <a className='text-blue-500 hover:underline' href={auth.url} target={auth.url !== '#home' ? "_blank" : ''}>{auth.name}</a>
+                                    <a 
+                                        className='text-blue-500 dark:text-blue-400 hover:underline text-sm' 
+                                        href={auth.url} 
+                                        target={auth.url !== '#home' ? "_blank" : ''}
+                                    >
+                                        {auth.name}
+                                    </a>
                                 </div>
-                            ))
-                        }
+                            ))}
+                        </div>
                     </div>
                 </div>
-                <div className='flex justify-end gap-2 mt-5'>
-                    {app && <Link href={app} target='_blank' className='bg-blue-700 text-white p-1 rounded-md hover:bg-blue-600 transition-all duration-300 ease-in-out'><CiGlobe size={30} /></Link>}
-                    {repo && <Link href={repo} target='_blank' className='bg-gray-700 text-white p-1 rounded-md hover:bg-gray-600 transition-all duration-300 ease-in-out'><FaGithub size={30} /></Link>}
-                    {info && <button className='bg-white p-1 rounded-md text-slate-700 hover:bg-gray-200 transition-all duration-300 ease-in-out'><FaInfoCircle size={30} /></button>}
-                </div>
+
+                {info && (
+                    <div className=' flex justify-end'>
+                        <button 
+                            className={cn(
+                                'flex items-center gap-2 px-4 py-2 rounded-lg transition-colors duration-300',
+                                'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600',
+                                'font-medium'
+                            )}
+                        >
+                            <FaInfoCircle size={20} />
+                            <span>Mais Informações</span>
+                        </button>
+                    </div>
+                )}
             </div>
         </div>
     );
