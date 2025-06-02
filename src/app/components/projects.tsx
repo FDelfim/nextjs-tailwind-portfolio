@@ -5,6 +5,7 @@ import Card from './ui/card'
 import { Project } from '@/types/project';
 import { useTranslation } from 'react-i18next';
 import '../../i18n';
+import { cn } from '../utils/theme';
 
 export default function Projects() {
     const { t } = useTranslation();
@@ -12,9 +13,16 @@ export default function Projects() {
 
     return (
         <div id='projects' className='py-4'>
-            <div className='flex-row gap-2 items-center text-gray-50 mb-3'>
-                <h2 className='text-2xl font-bold'>{t('projects.title')}</h2>
-                <p>{t('projects.subtitle')}</p>
+            <div className='text-center mb-12'>
+                <h2 className={cn(
+                    'text-3xl md:text-4xl font-bold mb-4',
+                    'bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent'
+                )}>
+                    {t('projects.title')}
+                </h2>
+                <p className={cn('text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto')}>
+                    {t('projects.subtitle')}
+                </p>
             </div>
             <div className='flex flex-wrap justify-center'>
                 {Array.isArray(projects) && projects.map((project, index) => (
