@@ -8,9 +8,23 @@ export function cn(...inputs: ClassValue[]) {
 export const themeClasses = {
   text: {
     primary: 'text-gray-800 dark:text-gray-100',
-    secondary: 'text-gray-600 dark:text-gray-300',
+    secondary: 'text-gray-00 dark:text-gray-300',
     muted: 'text-gray-500 dark:text-gray-400',
     inverse: 'text-gray-100 dark:text-gray-800',
+  },
+  projectText: {
+    title: 'bg-gradient-to-b dark:from-yellow-200 dark:to-yellow-500 from-blue-500 to-blue-800 bg-clip-text text-transparent',
+    subtitle: 'text-gray-800 dark:text-gray-200',
+    description: 'text-gray-700 dark:text-gray-300',
+    muted: 'text-gray-500 dark:text-gray-400',
+    inverse: 'text-gray-50 dark:text-gray-900',
+  },
+  experienceText: {
+    title: 'bg-gradient-to-b dark:from-yellow-200 dark:to-yellow-500 from-blue-500 to-blue-800 bg-clip-text text-transparent',
+    subtitle: 'text-gray-800 dark:text-gray-200',
+    description: 'text-gray-700 dark:text-gray-300',
+    muted: 'text-gray-500 dark:text-gray-400',
+    inverse: 'text-gray-50 dark:text-gray-900',
   },
   background: {
     primary: 'bg-white dark:bg-gray-900',
@@ -45,7 +59,7 @@ export const themeClasses = {
     transform: 'transition-transform duration-200',
   },
   gradient: {
-    primary: 'from-blue-500 to-blue-400 dark:from-blue-400 dark:to-blue-500',
+    primary: 'dark:from-yellow-300 dark:to-yellow-500 from-blue-500 to-blue-800',
   },
 } as const
 

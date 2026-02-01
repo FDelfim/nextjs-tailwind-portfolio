@@ -11,8 +11,8 @@
     "description": "Engenheiro da Computação formado pela Universidade Federal de Ouro Preto (UFOP), sou apaixonado por tecnologia e criar novas coisas. Trabalho atualmente como desenvolvedor fullstack, com Vue.js e Node.js."
   },
   "projects": {
-    "title": "Projetos",
-    "subtitle": "Alguns projetos desenvolvidos por mim.",
+    "title": "Projetos e Contribuições",
+    "subtitle": "Alguns projetos pessoais e profissionais que tive a oportunidade de desenvolver ou paticipar",
     "items": [
       {
         "title": "FlexiFile",
@@ -81,7 +81,7 @@
   },
   "experience": {
     "title": "Experiência Profissional",
-    "subtitle": "Minha jornada profissional e principais conquistas ao longo dos anos",
+    "subtitle": "Um pouco da minha jornada profissional, principais atribuições e contribuições ao longo do tempo...",
     "items": [
       {
         "company": "Econodata",
@@ -133,5 +133,9 @@
   "footer": {
     "copy": "© {{year}} • Felipe Delfim",
     "copyTooltip": "Copiar"
+  },
+  "actions": {
+    "viewApp": "Ver Aplicação",
+    "viewRepo": "Ver Repositório"
   }
 } 

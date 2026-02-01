@@ -43,21 +43,21 @@ export default function Experience({
                 'shadow-sm hover:shadow-md transition-shadow duration-300'
             )}>
                 <div className="flex flex-col md:flex-row md:items-center gap-4">
-                    <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+                    <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 flex items-center justify-center">
                         <Image
                             src={companyLogo}
                             alt={`${company} logo`}
                             fill
-                            className="object-contain p-2"
+                            className="object-contain"
                         />
                     </div>
 
                     <div className="flex-1 space-y-2">
                         <div>
-                            <h3 className={cn('text-xl font-bold', themeClasses.text.primary)}>
+                            <h3 className={cn('text-xl font-bold', themeClasses.experienceText.title)}>
                                 {role}
                             </h3>
-                            <h4 className={cn('text-lg font-medium text-blue-500 dark:text-blue-400')}>
+                            <h4 className={cn('text-lg font-medium text-blue-500 dark:text-blue-400', themeClasses.experienceText.subtitle)}>
                                 {company}
                             </h4>
                         </div>

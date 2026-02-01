@@ -11,8 +11,8 @@
     "description": "Computer Engineer graduated from Federal University of Ouro Preto (UFOP), I am passionate about technology and creating new things. I currently work as a fullstack developer, with Vue.js and Node.js."
   },
   "projects": {
-    "title": "Projects",
-    "subtitle": "Some projects developed by me.",
+    "title": "Projects and Contributions",
+    "subtitle": "Some personal and professional projects that I had the opportunity to develop or participate in.",
     "items": [
       {
         "title": "FlexiFile",
@@ -81,7 +81,7 @@
   },
   "experience": {
     "title": "Professional Experience",
-    "subtitle": "My professional journey and key achievements over the years",
+    "subtitle": "A bit of my professional journey, main roles and contributions over time...",
     "items": [
       {
         "company": "Econodata",
@@ -133,5 +133,9 @@
   "footer": {
     "copy": "© {{year}} • Felipe Delfim",
     "copyTooltip": "Copy"
+  },
+  "actions": {
+    "viewApp": "View Application",
+    "viewRepo": "View Repository"
   }
 } 

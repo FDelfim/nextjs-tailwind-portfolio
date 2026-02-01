@@ -5,6 +5,7 @@ import Experience from './ui/Experience'
 import { useTranslation } from 'react-i18next'
 import '../../i18n'
 import { cn } from '@/app/utils/theme'
+import { FaBriefcase, FaDivide } from 'react-icons/fa'
 
 export default function Experiences() {
     const { t } = useTranslation();
@@ -13,14 +14,14 @@ export default function Experiences() {
     return (
         <section className="py-16" id="experience">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
+                <div className="mb-12">
                     <h2 className={cn(
                         'text-3xl md:text-4xl font-bold mb-4',
-                        'bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent'
+                        'bg-gradient-to-b dark:from-yellow-300 dark:to-yellow-500 from-blue-500 to-blue-800 bg-clip-text text-transparent'
                     )}>
                         {t('experience.title')}
                     </h2>
-                    <p className={cn('text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto')}>
+                    <p className={cn('text-lg text-gray-600 dark:text-gray-400 max-w-4xl')}>
                         {t('experience.subtitle')}
                     </p>
                 </div>

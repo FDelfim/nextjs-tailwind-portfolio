@@ -4,8 +4,10 @@ import { CiGlobe } from 'react-icons/ci';
 import Link from 'next/link';
 import { Project } from '@/types/project';
 import { cn, themeClasses } from '@/app/utils/theme';
+import { useTranslation } from 'react-i18next';
 
 export default function Card(props: Project) {
+    const { t } = useTranslation();
     const { img, title, technologies, subtitle, description, app, repo, info, author } = props;
 
     return (
@@ -40,8 +42,8 @@ export default function Card(props: Project) {
             )}>
                 <div className='space-y-4'>
                     <div>
-                        <h2 className='text-2xl text-blue-500 dark:text-blue-400 font-bold font-sans'>{title}</h2>
-                        <h2 className={cn('text-sm mt-1 font-light', themeClasses.text.secondary)}>{subtitle}</h2>
+                        <h2 className={cn('text-2xl font-bold font-sans', themeClasses.projectText.title)}>{title}</h2>
+                        <h2 className={cn('text-sm mt-1 font-light', themeClasses.projectText.subtitle)}>{subtitle}</h2>
                     </div>
 
                     <div className='flex gap-3'>
@@ -56,7 +58,7 @@ export default function Card(props: Project) {
                                 )}
                             >
                                 <CiGlobe size={20} />
-                                <span>Acessar Aplicação</span>
+                                <span>{t('actions.viewApp')}</span>
                             </Link>
                         )}
                         {repo && (
@@ -70,12 +72,12 @@ export default function Card(props: Project) {
                                 )}
                             >
                                 <FaGithub size={20} />
-                                <span>Ver Código</span>
+                                <span>{t('actions.viewRepo')}</span>
                             </Link>
                         )}
                     </div>
 
-                    <div className={cn('text-sm', themeClasses.text.primary)}>
+                    <div className={cn('text-sm', themeClasses.projectText.description)}>
                         <span dangerouslySetInnerHTML={{ __html: description }}></span>
                     </div>
 
