@@ -6,7 +6,7 @@
     "contact": "Contact"
   },
   "home": {
-    "title": "Felipe Delfim",
+    "title": "Felipe Delfim Machado",
     "subtitle": "Fullstack Developer",
     "description": "Computer Engineer graduated from Federal University of Ouro Preto (UFOP), I am passionate about technology and creating new things. I currently work as a fullstack developer, with Vue.js and Node.js."
   },
@@ -90,7 +90,7 @@
         "endDate": "Current",
         "location": "Remote",
         "description": "Development and maintenance of web systems for economic and financial data analysis.",
-        "technologies": ["Vue.js", "Node.js", "PostgreSQL", "Tailwind", "Google Cloud", "Azion", "Cypress", "GoCD", "GA4"],
+        "technologies": ["Vue.js", "Node.js", "PostgreSQL", "Tailwind", "Google Cloud", "Azion", "Cypress", "GoCD", "GA4", "GCP"],
         "achievements": [
           "End-to-end project creation for lead collection and real-time processing",
           "Integration with tools such as GA4 and Google Analytics for data analysis",

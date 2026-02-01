@@ -40,7 +40,7 @@ export default function Navbar() {
       themeClasses.background.overlay,
       themeClasses.transition.colors
     )}>
-      <div className='flex justify-between items-center py-2 px-4 backdrop-filter backdrop-blur-lg'>
+      <div className='flex justify-between items-center py-2 px-4 backdrop-filter backdrop-blur-lg shadow-sm'>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className={cn(
